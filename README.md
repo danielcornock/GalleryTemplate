@@ -6,3 +6,6 @@ To use this template in wordpress, simply add the default wordpress gallery widg
 
 ## Plain HTML
 For plain HTML, you'll need to dissect the code a bit to remove it from the head tags that are used to display the demo of the page.
+
+## Notes
+Due to the use of <kbd>object-fit: cover</kbd>, this will not be compatible with IE11 or lower.
