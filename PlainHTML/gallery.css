@@ -1,0 +1,128 @@
+#gallery {
+  background-color: #030303;
+}
+
+.gallery__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  width: 100%;
+}
+
+.gallery__content > img {
+  height: 300px;
+  width: 100%;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gallery__content > img:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 1100px) {
+  .gallery__content {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .gallery__content {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery__content {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.gallery__modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.gallery__modal--active {
+  z-index: 110;
+  opacity: 1;
+}
+
+.modal__image {
+  height: auto;
+  max-height: 90%;
+  width: auto;
+  max-width: 90%;
+  z-index: 112;
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+}
+
+.gallery__button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 200;
+}
+
+.gallery__button--right {
+  right: 10%;
+}
+
+.gallery__button--left {
+  left: 10%;
+}
+
+.gallery__icon {
+  color: white;
+  font-size: 50px;
+}
+
+.gallery__modal--loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  z-index: 111;
+}
+
+.gallery__close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.gallery__close__icon {
+  font-size: 30px;
+  color: white;
+}
