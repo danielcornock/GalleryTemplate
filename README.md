@@ -4,7 +4,7 @@ This code is open source and free to use in your websites. Just copy & paste the
 Preview the gallery [here](https://danielcornock-gallery.netlify.com/).
 
 ## Wordpress
-To use this template in wordpress, simply add the default wordpress gallery widget to the page that you add this template to and the code should do the rest.
+To use this template in wordpress, simply add the default wordpress gallery widget to the page that you add this template to and the code should do the rest. For the icons, the fontawesome CDN needs to be added to the head element at the top of the page.
 
 ## Plain HTML
 For plain HTML, you'll need to dissect the code a bit to remove it from the head tags that are used to display the demo of the page.
